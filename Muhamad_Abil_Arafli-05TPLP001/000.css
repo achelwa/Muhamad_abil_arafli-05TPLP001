@@ -1,0 +1,84 @@
+/* Styling for the table container */
+.card-body {
+    padding: 20px;
+    background-color: #f4f7fa;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+}
+
+/* Basic table styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table th,
+table td {
+    padding: 12px 15px;
+    text-align: left;
+    font-size: 16px;
+}
+
+/* Header styling */
+table thead th {
+    background-color: #0073e6;
+    color: #fff;
+    font-weight: bold;
+}
+
+table tfoot th {
+    background-color: #0073e6;
+    color: #fff;
+    font-weight: bold;
+}
+
+/* Zebra striping for rows */
+table tbody tr:nth-child(even) {
+    background-color: #e9f3ff;
+}
+
+/* Hover effect for rows */
+table tbody tr:hover {
+    background-color: #d3e7ff;
+    cursor: pointer;
+}
+
+/* Border for table cells */
+table th,
+table td {
+    border: 1px solid #d1dbe5;
+}
+
+/* Responsive table styling */
+@media (max-width: 768px) {
+    table,
+    thead,
+    tbody,
+    tfoot,
+    th,
+    td,
+    tr {
+        display: block;
+    }
+
+    table tr {
+        margin-bottom: 10px;
+    }
+
+    table th,
+    table td {
+        padding: 10px;
+        text-align: right;
+        position: relative;
+    }
+
+    table th::before,
+    table td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 10px;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+}

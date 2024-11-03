@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pemberitahuan dan Tracking Masalah Perusahaan</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 20px;
+            color: #343a40;
+        }
+        h1 {
+            color: #007bff;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: #ffffff;
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #dee2e6;
+        }
+        th {
+            background-color: #007bff;
+            color: white;
+        }
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+        .status-resolved {
+            background-color: #d4edda;
+        }
+        .status-pending {
+            background-color: #f8d7da;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Pemberitahuan dan Tracking Masalah Perusahaan</h1>
+
+<table id="issueTable">
+    <thead>
+        <tr>
+            <th>Bagian</th>
+            <th>Masalah</th>
+            <th>Tanggal Laporan</th>
+            <th>Status</th>
+            <th>Ubah Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr class="status-pending">
+            <td>Keuangan</td>
+            <td>Anggaran bulanan tidak mencukupi</td>
+            <td>2024-10-10</td>
+            <td>Pending</td>
+            <td><button onclick="resolveIssue(this)">Selesai</button></td>
+        </tr>
+        <tr class="status-pending">
+            <td>Produksi</td>
+            <td>Keterlambatan pengiriman bahan baku</td>
+            <td>2024-10-12</td>
+            <td>Pending</td>
+            <td><button onclick="resolveIssue(this)">Selesai</button></td>
+        </tr>
+        <tr class="status-pending">
+            <td>Keuangan</td>
+            <td>Pengeluaran tidak terduga pada Q3</td>
+            <td>2024-10-15</td>
+            <td>Pending</td>
+            <td><button onclick="resolveIssue(this)">Selesai</button></td>
+        </tr>
+        <tr class="status-pending">
+            <td>Produksi</td>
+            <td>Perbaikan mesin produksi</td>
+            <td>2024-10-20</td>
+            <td>Pending</td>
+            <td><button onclick="resolveIssue(this)">Selesai</button></td>
+        </tr>
+        <tr class="status-pending">
+            <td>Keuangan</td>
+            <td>Keterlambatan pelaporan keuangan bulanan</td>
+            <td>2024-10-25</td>
+            <td>Pending</td>
+            <td><button onclick="resolveIssue(this)">Selesai</button></td>
+        </tr>
+        <!-- Tambahkan data lainnya sesuai kebutuhan -->
+    </tbody>
+</table>
+
+<script>
+    // Fungsi untuk menandai masalah sebagai selesai
+    function resolveIssue(button) {
+        const row = button.parentElement.parentElement;
+        row.classList.remove('status-pending');
+        row.classList.add('status-resolved');
+        row.cells[3].innerText = "Selesai";
+        button.disabled = true;
+    }
+</script>
+
+</body>
+</html>

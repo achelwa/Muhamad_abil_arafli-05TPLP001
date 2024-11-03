@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Absensi Karyawan</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+
+        .card-body {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="card-body">
+        <table id="datatablesSimple">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Position</th>
+                    <th>Absensi</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>John Cena</td>
+                    <td>System Architect</td>
+                    <td><input type="checkbox" class="attendance"></td>
+                </tr>
+                <tr>
+                    <td>Kairi</td>
+                    <td>Accountant</td>
+                    <td><input type="checkbox" class="attendance"></td>
+                </tr>
+                <tr>
+                    <td>El May</td>
+                    <td>Junior Technical Author</td>
+                    <td><input type="checkbox" class="attendance"></td>
+                </tr>
+                <tr>
+                    <td>Ronaldo</td>
+                    <td>Senior Marketing Designer</td>
+                    <td><input type="checkbox" class="attendance"></td>
+                </tr>
+                <tr>
+                    <td>Balmon</td>
+                    <td>Regional Director</td>
+                    <td><input type="checkbox" class="attendance"></td>
+                </tr>
+                <tr>
+                    <td>Lancelot</td>
+                    <td>Marketing Designer</td>
+                    <td><input type="checkbox" class="attendance"></td>
+                </tr>
+                <tr>
+                    <td>Usuf</td>
+                    <td>Chief Financial Officer (CFO)</td>
+                    <td><input type="checkbox" class="attendance"></td>
+                </tr>
+                <tr>
+                    <td>Sanex</td>
+                    <td>Systems Administrator</td>
+                    <td><input type="checkbox" class="attendance"></td>
+                </tr>
+                <tr>
+                    <td>Harry Maguire</td>
+                    <td>Team Leader</td>
+                    <td><input type="checkbox" class="attendance"></td>
+                </tr>
+                <tr>
+                    <td>Bruce Lee</td>
+                    <td>Post-Sales Support</td>
+                    <td><input type="checkbox" class="attendance"></td>
+                </tr>
+                <tr>
+                    <td>Gavi</td>
+                    <td>Marketing Designer</td>
+                    <td><input type="checkbox" class="attendance"></td>
+                </tr>
+                <tr>
+                    <td>Dominic Toretto</td>
+                    <td>Office Manager</td>
+                    <td><input type="checkbox" class="attendance"></td>
+                </tr>
+                <tr>
+                    <td>Unet</td>
+                    <td>Secretary</td>
+                    <td><input type="checkbox" class="attendance"></td>
+                </tr>
+                <tr>
+                    <td>Vavian Acuuu</td>
+                    <td>Financial Controller</td>
+                    <td><input type="checkbox" class="attendance"></td>
+                </tr>
+                <tr>
+                    <td>Timothy Crypto</td>
+                    <td>Office Manager</td>
+                    <td><input type="checkbox" class="attendance"></td>
+                </tr>
+                <tr>
+                    <td>Rohman Busi</td>
+                    <td>Director</td>
+                    <td><input type="checkbox" class="attendance"></td>
+                </tr>
+                <tr>
+                    <td>Rusdi</td>
+                    <td>Support Engineer</td>
+                    <td><input type="checkbox" class="attendance"></td>
+                </tr>
+                <tr>
+                    <td>Bruno Mars</td>
+                    <td>Software Engineer</td>
+                    <td><input type="checkbox" class="attendance"></td>
+                </tr>
+                <tr>
+                    <td>Sakura Bebean</td>
+                    <td>Support Engineer</td>
+                    <td><input type="checkbox" class="attendance"></td>
+                </tr>
+                <tr>
+                    <td>Prabowo</td>
+                    <td>Developer</td>
+                    <td><input type="checkbox" class="attendance"></td>
+                </tr>
+                <tr>
+                    <td>Alam Sutra</td>
+                    <td>Support Engineer</td>
+                    <td><input type="checkbox" class="attendance"></td>
+                </tr>
+                <tr>
+                    <td>Serge Baldwin</td>
+                    <td>Data Coordinator</td>
+                    <td><input type="checkbox" class="attendance"></td>
+                </tr>
+                <tr>
+                    <td>Zenaida Frank</td>
+                    <td>Software Engineer</td>
+                    <td><input type="checkbox" class="attendance"></td>
+                </tr>
+                <tr>
+                    <td>Zorita Serrano</td>
+                    <td>Software Engineer</td>
+                    <td><input type="checkbox" class="attendance"></td>
+                </tr>
+                <tr>
+                    <td>Jennifer Acosta</td>
+                    <td>Junior Javascript Developer</td>
+                    <td><input type="checkbox" class="attendance"></td>
+                </tr>
+                <tr>
+                    <td>Cara Stevens</td>
+                    <td>Sales Assistant</td>
+                    <td><input type="checkbox" class="attendance"></td>
+                </tr>
+                <tr>
+                    <td>Hermione Butler</td>
+                    <td>Regional Director</td>
+                    <td><input type="checkbox" class="attendance"></td>
+                </tr>
+                <tr>
+                    <td>Jonas Alexander</td>
+                    <td>Developer</td>
+                    <td><input type="checkbox" class="attendance"></td>
+                </tr>
+                <tr>
+                    <td>Shad Decker</td>
+                    <td>Support Engineer</td>
+                    <td><input type="checkbox" class="attendance"></td>
+                </tr>
+                <tr>
+                    <td>Neha Agrawal</td>
+                    <td>Software Engineer</td>
+                    <td><input type="checkbox" class="attendance"></td>
+                </tr>
+                <tr>
+                    <td>Vladimir</td>
+                    <td>Chief Executive Officer (CEO)</td>
+                    <td><input type="checkbox" class="attendance"></td>
+                </tr>
+                <tr>
+                    <td>Junior Technical Author</td>
+                    <td>San Francisco</td>
+                    <td><input type="checkbox" class="attendance"></td>
+                </tr>
+                <tr>
+                    <td>Putin</td>
+                    <td>Sales Assistant</td>
+                    <td><input type="checkbox" class="attendance"></td>
+                </tr>
+                <tr>
+                    <td>Angga</td>
+                    <td>Technical Author</td>
+                    <td><input type="checkbox" class="attendance"></td>
+                </tr>
+                <tr>
+                    <td>Sandy Bun</td>
+                    <td>Chief Executive Officer (CEO)</td>
+                    <td><input type="checkbox" class="attendance"></td>
+                </tr>
+                <tr>
+                    <td>Brian Silva</td>
+                    <td>Junior Technical Author</td>
+                    <td><input type="checkbox" class="attendance"></td>
+                </tr>
+                <tr>
+                    <td>Paula Schmitt</td>
+                    <td>Software Engineer</td>
+                    <td><input type="checkbox" class="attendance"></td>
+                </tr>
+                <tr>
+                    <td>Harley Quinn</td>
+                    <td>Team Leader</td>
+                    <td><input type="checkbox" class="attendance"></td>
+                </tr>
+                <tr>
+                    <td>Beckham</td>
+                    <td>Support Engineer</td>
+                    <td><input type="checkbox" class="attendance"></td>
+                </tr>
+                <tr>
+                    <td>Pasta Leoni</td>
+                    <td>Software Engineer</td>
+                    <td><input type="checkbox" class="attendance"></td>
+                </tr>
+                <tr>
+                    <td>Samuel L. Jackson</td>
+                    <td>Senior Marketing Designer</td>
+                    <td><input type="checkbox" class="attendance"></td>
+                </tr>
+                <tr>
+                    <td>Jessica Smith</td>
+                    <td>Junior Javascript Developer</td>
+                    <td><input type="checkbox" class="attendance"></td>
+                </tr>
+                <tr>
+                    <td>Alexander Rainer</td>
+                    <td>Senior Marketing Designer</td>
+                    <td><input type="checkbox" class="attendance"></td>
+                </tr>
+                <tr>
+                    <td>Jack Reacher</td>
+                    <td>Team Leader</td>
+                    <td><input type="checkbox" class="attendance"></td>
+                </tr>
+                <tr>
+                    <td>Harry</td>
+                    <td>Software Engineer</td>
+                    <td><input type="checkbox" class="attendance"></td>
+                </tr>
+                <tr>
+                    <td>Wayne Bruce</td>
+                    <td>Support Engineer</td>
+                    <td><input type="checkbox" class="attendance"></td>
+                </tr>
+                <tr>
+                    <td>Robocop</td>
+                    <td>Systems Administrator</td>
+                    <td><input type="checkbox" class="attendance"></td>
+                </tr>
+                <tr>
+                    <td>Ali Raza</td>
+                    <td>Marketing Designer</td>
+                    <td><input type="checkbox" class="attendance"></td>
+                </tr>
+                <tr>
+                    <td>Harrison Ford</td>
+                    <td>Accountant</td>
+                    <td><input type="checkbox" class="attendance"></td>
+                </tr>
+                <tr>
+                    <td>Shinchan</td>
+                    <td>Office Manager</td>
+                    <td><input type="checkbox" class="attendance"></td>
+                </tr>
+                <tr>
+                    <td>James Bond</td>
+                    <td>Chief Executive Officer (CEO)</td>
+                    <td><input type="checkbox" class="attendance"></td>
+                </tr>
+                <tr>
+                    <td>Peter Parker</td>
+                    <td>Developer</td>
+                    <td><input type="checkbox" class="attendance"></td>
+                </tr>
+                <tr>
+                    <td>Natasha Romanoff</td>
+                    <td>Senior Marketing Designer</td>
+                    <td><input type="checkbox" class="attendance"></td>
+                </tr>
+                <tr>
+                    <td>Chuck Norris</td>
+                    <td>Data Coordinator</td>
+                    <td><input type="checkbox" class="attendance"></td>
+                </tr>
+                <tr>
+                    <td>Thor</td>
+                    <td>Junior Javascript Developer</td>
+                    <td><input type="checkbox" class="attendance"></td>
+                </tr>
+                <tr>
+                    <td>Clark Kent</td>
+                    <td>Sales Assistant</td>
+                    <td><input type="checkbox" class="attendance"></td>
+                </tr>
+                <tr>
+                    <td>Bruce Wayne</td>
+                    <td>Senior Marketing Designer</td>
+                    <td><input type="checkbox" class="attendance"></td>
+                </tr>
+                <tr>
+                    <td>Sherlock Holmes</td>
+                    <td>Support Engineer</td>
+                    <td><input type="checkbox" class="attendance"></td>
+                </tr>
+                <tr>
+                    <td>Aragorn</td>
+                    <td>Team Leader</td>
+                    <td><input type="checkbox" class="attendance"></td>
+                </tr>
+                <tr>
+                    <td>Frodo Baggins</td>
+                    <td>Software Engineer</td>
+                    <td><input type="checkbox" class="attendance"></td>
+                </tr>
+                <tr>
+                    <td>Gandalf</td>
+                    <td>Senior Marketing Designer</td>
+                    <td><input type="checkbox" class="attendance"></td>
+                </tr>
+                <tr>
+                    <td>Legolas</td>
+                    <td>Data Coordinator</td>
+                    <td><input type="checkbox" class="attendance"></td>
+                </tr>
+                <tr>
+                    <td>Samwise Gamgee</td>
+                    <td>Support Engineer</td>
+                    <td><input type="checkbox" class="attendance"></td>
+                </tr>
+                <tr>
+                    <td>Daenerys Targaryen</td>
+                    <td>Team Leader</td>
+                    <td><input type="checkbox" class="attendance"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

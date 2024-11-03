@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Diri Admin</title>
+    <style>
+       body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa; /* Warna latar belakang halaman */
+    margin: 0;
+    padding: 20px;
+}
+
+.container-fluid {
+    max-width: 1200px; /* Maksimal lebar container */
+    margin: auto; /* Center container */
+}
+
+.card {
+    background-color: #ffffff; /* Warna latar belakang kartu */
+    border-radius: 10px; /* Sudut melengkung pada kartu */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Efek bayangan */
+    padding: 20px; /* Padding dalam kartu */
+    margin-top: 20px; /* Jarak antara kartu dan elemen sebelumnya */
+}
+
+.admin-profile-card {
+    display: flex; /* Flexbox untuk layout */
+    align-items: center; /* Vertikal align center */
+}
+
+.profile-photo {
+    width: 100px; /* Lebar foto profil */
+    height: 100px; /* Tinggi foto profil */
+    margin-right: 20px; /* Jarak antara foto dan detail admin */
+    border-radius: 50%; /* Membuat foto menjadi bulat */
+    object-fit: cover; /* Memastikan gambar tidak terdistorsi */
+}
+
+.admin-name {
+    font-size: 1.5em; /* Ukuran font untuk nama admin */
+    margin: 0; /* Menghapus margin */
+    color: #343a40; /* Warna teks nama admin */
+}
+
+.admin-details {
+    margin-top: 10px; /* Jarak antara nama dan detail admin */
+}
+
+h6 {
+    margin: 5px 0; /* Jarak antara elemen heading */
+    color: #6c757d; /* Warna untuk subjudul */
+}
+
+.text-muted {
+    color: #6c757d; /* Warna teks untuk detail */
+    margin: 2px 0; /* Jarak antara detail */
+}
+
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid px-4">
+        <!-- Admin Profile Card -->
+        <div class="card admin-profile-card">
+            <div class="card-body d-flex align-items-center">
+                <img src="assets/img/abil.jpg" alt="Foto Admin" class="rounded-circle profile-photo">
+                <div class="admin-details">
+                    <h5 class="admin-name">Muhamad abil arafli</h5>
+                    <h6 class="admin-details">UTS Pemograman Web 1 2024</h6>
+                    <p class="text-muted">Email: abilarafli123@gmail.com</p>
+                    <p class="text-muted">Phone: 0857-1709-0572</p>
+                    <p class="text-muted">Address: Sawangan, Depok Baru </p>
+                    <p class="text-muted">Date of Birth: 26 desember 2003 </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

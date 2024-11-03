@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar Kerja Sama</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 20px;
+            color: #343a40;
+        }
+        h1 {
+            color: #007bff;
+        }
+        input[type="text"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            border: 1px solid #ced4da;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: #ffffff;
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #dee2e6;
+        }
+        th {
+            background-color: #007bff;
+            color: white;
+        }
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Daftar Kerja Sama Sponsorship dan Kolaborasi</h1>
+
+<label for="search">Cari Perusahaan:</label>
+<input type="text" id="search" placeholder="Masukkan nama perusahaan..." onkeyup="filterTable()">
+
+<table id="collaborationTable">
+    <thead>
+        <tr>
+            <th>Nama Perusahaan</th>
+            <th>Alamat</th>
+            <th>Pengiriman</th>
+            <th>Acara</th>
+            <th>ACC</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>PT Astra Honda</td>
+            <td>Jl. Raya Serpong No.1, Tangerang</td>
+            <td>Email</td>
+            <td>Seminar Teknologi</td>
+            <td><input type="checkbox" class="acc-check"></td>
+        </tr>
+        <tr>
+            <td>PT Telkom Indonesia</td>
+            <td>Jl. Gatot Subroto No.52, Jakarta</td>
+            <td>Pos</td>
+            <td>Job Fair</td>
+            <td><input type="checkbox" class="acc-check"></td>
+        </tr>
+        <tr>
+            <td>PT Pertamina</td>
+            <td>Jl. Sukajadi No.30, Bandung</td>
+            <td>Email</td>
+            <td>Workshop Lingkungan</td>
+            <td><input type="checkbox" class="acc-check"></td>
+        </tr>
+        <tr>
+            <td>PT Bank BCA</td>
+            <td>Jl. Sudirman No.10, Jakarta</td>
+            <td>Pos</td>
+            <td>Pendidikan Keuangan</td>
+            <td><input type="checkbox" class="acc-check"></td>
+        </tr>
+        <tr>
+            <td>PT Indofood</td>
+            <td>Jl. Thamrin No.45, Jakarta</td>
+            <td>Email</td>
+            <td>Expo Produk Lokal</td>
+            <td><input type="checkbox" class="acc-check"></td>
+        </tr>
+        <!-- Tambahkan data lainnya sesuai kebutuhan -->
+    </tbody>
+</table>
+
+<script>
+    // Fungsi untuk memfilter data berdasarkan input pencarian
+    function filterTable() {
+        const searchValue = document.getElementById("search").value.toLowerCase();
+        const table = document.getElementById("collaborationTable");
+        const rows = table.getElementsByTagName("tr");
+
+        for (let i = 1; i < rows.length; i++) {
+            const row = rows[i];
+            const cells = row.getElementsByTagName("td");
+            let match = false;
+
+            for (let j = 0; j < cells.length - 1; j++) { // skip checkbox column
+                if (cells[j].innerText.toLowerCase().includes(searchValue)) {
+                    match = true;
+                    break;
+                }
+            }
+            row.style.display = match ? "" : "none";
+        }
+    }
+</script>
+
+</body>
+</html>
+
